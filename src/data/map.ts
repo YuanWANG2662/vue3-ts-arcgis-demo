@@ -34,8 +34,8 @@ function genSmpSym (color: string) {
           color: color,
           style: "solid",
           outline: {
-            width: 0.2,
-            color: [255, 255, 255, 0.5]
+            width: 0.5,
+            color: [120, 120, 120, 0.5]
           }
     }                
 }
@@ -79,12 +79,42 @@ export const choroRenderer = new ClassBreaksRenderer({
           ]
     
 })
+
+export const popupTemplt = {
+  // autocasts as new PopupTemplate()
+  title: "{pname}, {XZQMC}",
+  content: [
+    {
+      type: "fields",
+      fieldInfos: [
+        {
+          fieldName: "pname",
+          label: "区"
+        },
+        {
+          fieldName: "XZQMC",
+          label: "乡镇"
+        },
+        {
+          fieldName: "number",
+          label: "number"
+        },
+        {
+          fieldName: "pcode",
+          label: "pcode"
+        }
+      ]
+    }
+  ]
+}
+
 export const tzqhLayer = new FeatureLayer({
     title: "通州行政区划",
     url: "https://services.arcgis.com/Sf0q24s0oDKgX14j/arcgis/rest/services/tzqh/FeatureServer/0",
     copyright: "App and maps by <a href=\"https://github.com/YuanWANG2662\">Yuan Wang</a>",
     outFields: ["*"],
     renderer: choroRenderer,
+    popupTemplate:popupTemplt
 })
 
 

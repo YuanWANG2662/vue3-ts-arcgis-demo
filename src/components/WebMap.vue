@@ -6,6 +6,7 @@
 import { defineComponent } from "vue";
 import * as intl from "@arcgis/core/intl";
 
+//本地化
 intl.setLocale("zh-CN");
 
 export default defineComponent({
