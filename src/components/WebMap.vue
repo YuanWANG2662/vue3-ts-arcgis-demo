@@ -15,7 +15,7 @@ export default defineComponent({
     map_id: String,
   },
   async mounted() {
-    const app = await import("../data/map");
+    const app = await import("../maps/map");
     app.initialize(this.$el);
     app.addLayerToMap(app.tzqhLayer);
   },
