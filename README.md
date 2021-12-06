@@ -1,5 +1,5 @@
 # vue3-ts-arcgis-demo
-vue3+ts+arcgis api for js 4.x + echarts 5.x 显示分级渲染地图+柱状图符号+时间滚动周demo
+vue3+ts+arcgis api for js 4.x + echarts 5.x 显示分级渲染地图+柱状图符号+时间滚动轴demo
 ## Project setup
 ```
 npm install
