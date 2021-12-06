@@ -15,7 +15,7 @@ export default defineComponent({
     map_id: String,
   },
   async mounted() {
-    const app = await import("../maps/map");
+    const app = await import("../webmap/map");
     app.initialize(this.$el);
     app.addLayerToMap(app.tzqhLayer);
   },
@@ -30,5 +30,8 @@ export default defineComponent({
   margin: 0;
   width: 100%;
   height: 100%;
+  position: relative;
+  //隐藏溢出的柱状图
+  overflow: hidden;
 }
 </style>
